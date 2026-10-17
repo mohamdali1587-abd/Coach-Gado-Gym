@@ -24,7 +24,7 @@ defmodule ScopestrengthWeb.UserLoginLive do
     <div class="flex min-h-screen items-center justify-center px-4 py-12">
       <div class="w-full max-w-sm">
         <div class="text-center">
-          <p class="text-xs font-medium uppercase tracking-widest text-dim">Scope Strength</p>
+          <p class="text-xs font-medium uppercase tracking-widest text-dim">Coach Gado</p>
           <h1 class="mt-2 font-display text-5xl font-bold uppercase tracking-wide text-foreground">
             Sign in
           </h1>

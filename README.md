@@ -1,13 +1,16 @@
-# ScopeStrength
+# Coach Gado Gym
 
-Open source software for personal trainers and their clients. Trainers manage clients,
-build programmes and track progress; clients log their own workouts, weight and photos,
-and message their trainer. Everything runs in one Phoenix application backed by
+An adapted, installable coaching platform for Coach Gado and trainees. Coaches manage
+clients, build programmes and track progress; trainees log workouts, weight and photos,
+and message their coach. The application runs in one Phoenix application backed by
 PostgreSQL.
 
-Demo version: [app.scopestrength.com](https://scopestrength.com). You can also host it
-yourself — the whole application is in this repository under the AGPL, with no paid
-tier, no feature flags and no phone-home.
+This version is based on [ScopeStrength](https://github.com/Ebrahimgreat/scopestrength)
+by Ebrahim Shahid Arshad. It remains licensed under AGPL-3.0-or-later; see [LICENSE](LICENSE)
+and [NOTICE](NOTICE) for attribution and source terms.
+
+The app can be installed from its hosted website on phones and computers. Hosting and
+account setup are required before trainees can use it.
 
 ---
 
@@ -266,7 +269,7 @@ The codebase carries the AGPL header on each file and, by convention, no other c
 
 ## Licence
 
-ScopeStrength is free software licensed under the
+Coach Gado Gym is free software licensed under the
 [GNU Affero General Public License v3.0 or later](LICENSE).
 
 You may run, study, modify and share it. The AGPL's network clause means that if you

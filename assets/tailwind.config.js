@@ -14,24 +14,24 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#FD4F00",
+        brand: "#a3e635",
 
-        background: "#0a0a0a",
-        card: "#111111",
-        muted: "#161616",
-        secondary: "#1c1c1c",
-        line: "#1f1f1f",
+        background: "#1A1A1B",
+        card: "#222223",
+        muted: "#272728",
+        secondary: "#303031",
+        line: "#3a3a3b",
 
         foreground: "#efefef",
         dim: "#8a8a8a",
         faint: "#5a5a5a",
 
         primary: {
-          DEFAULT: "#c8f736",
-          foreground: "#0a0a0a"
+          DEFAULT: "#a3e635",
+          foreground: "#1A1A1B"
         },
 
-        success: "#c8f736",
+        success: "#a3e635",
         warning: "#e8a33d",
         danger: "#e8674f"
       },
@@ -47,7 +47,7 @@ module.exports = {
         xl: "14px"
       },
       ringColor: {
-        DEFAULT: "#c8f736"
+        DEFAULT: "#a3e635"
       }
     },
   },

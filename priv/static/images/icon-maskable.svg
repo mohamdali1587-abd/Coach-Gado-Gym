@@ -2,8 +2,8 @@
   <!-- Maskable variant: Android crops this to a circle/squircle/rounded square,
        so the mark is scaled to ~60% and centred inside the 80% safe zone.
        Full-bleed background, no rounded corners -- the mask supplies the shape. -->
-  <rect width="512" height="512" fill="#0a0a0a"/>
-  <g fill="#c8f736" transform="translate(256 256) scale(0.62) translate(-256 -256)">
+  <rect width="512" height="512" fill="#1A1A1B"/>
+  <g fill="#a3e635" transform="translate(256 256) scale(0.62) translate(-256 -256)">
     <rect x="112" y="236" width="288" height="40" rx="20"/>
     <rect x="132" y="176" width="44" height="160" rx="18"/>
     <rect x="336" y="176" width="44" height="160" rx="18"/>
