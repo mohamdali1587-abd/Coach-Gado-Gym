@@ -1,0 +1,36 @@
+{
+  "name": "coach-gado-gym-desktop",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Coach Gado Gym desktop launcher for a self-hosted web instance",
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist:win": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "44.0.0",
+    "electron-builder": "^26.17.0"
+  },
+  "build": {
+    "appId": "com.coachgado.gym.desktop",
+    "productName": "Coach Gado Gym",
+    "directories": { "output": "dist" },
+    "files": ["main.cjs", "preload.cjs", "connect.html", "connect.js", "icon.png", "package.json"],
+    "extraResources": [
+      { "from": "../LICENSE", "to": "LICENSE" },
+      { "from": "../NOTICE.md", "to": "NOTICE.md" }
+    ],
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Coach Gado Gym"
+    }
+  }
+}

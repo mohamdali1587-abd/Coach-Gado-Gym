@@ -1,0 +1,34 @@
+name: Windows desktop installer
+
+on:
+  push:
+    branches:
+      - coach-gado/initial-setup
+    paths:
+      - 'desktop/**'
+      - '.github/workflows/build-windows-desktop.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Install desktop dependencies
+        run: npm install
+        working-directory: desktop
+      - name: Build Windows installer
+        run: npm run dist:win
+        working-directory: desktop
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Coach-Gado-Gym-Windows-Installer
+          path: desktop/dist/*.exe
+          if-no-files-found: error
+          retention-days: 14

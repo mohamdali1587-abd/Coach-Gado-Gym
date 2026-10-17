@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1A1A1B">
+  <title>Coach Gado Gym</title>
+  <style>
+    * { box-sizing: border-box }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #1a1a1b; color: #f5f5f5; font: 16px/1.6 "Segoe UI", Tahoma, sans-serif }
+    main { width: min(92vw, 470px); padding: 36px; background: #242426; border: 1px solid #39393c; border-radius: 20px; box-shadow: 0 24px 70px #0006 }
+    img { display: block; width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 18px }
+    h1 { text-align: center; font-size: 24px; margin: 0 0 8px }
+    p { color: #b7b7bc; margin: 0 0 22px }
+    label { display: block; margin-bottom: 8px; font-weight: 600 }
+    input { width: 100%; padding: 13px 14px; border: 1px solid #55555a; border-radius: 10px; color: white; background: #171718; font: inherit; direction: ltr; text-align: left }
+    input:focus { outline: 2px solid #c6a15b; border-color: transparent }
+    button { width: 100%; margin-top: 16px; padding: 13px; border: 0; border-radius: 10px; background: #c6a15b; color: #171718; font: inherit; font-weight: 700; cursor: pointer }
+    #error { min-height: 26px; margin-top: 12px; color: #ff9d9d }
+    small { display: block; color: #929298; margin-top: 18px }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="icon.png" alt="">
+    <h1>Coach Gado Gym</h1>
+    <p>اكتب عنوان الخادم الذي تستخدم عليه التطبيق لفتحه على هذا الجهاز.</p>
+    <form id="connect-form">
+      <label for="server">عنوان الخادم</label>
+      <input id="server" name="server" type="url" placeholder="https://gym.example.com" autocomplete="url" required autofocus>
+      <button type="submit">اتصال</button>
+      <div id="error" role="alert"></div>
+    </form>
+    <small>يُحفظ العنوان على هذا الجهاز فقط. استخدم HTTPS إذا كان الخادم متاحًا عبر الإنترنت.</small>
+  </main>
+  <script src="connect.js"></script>
+</body>
+</html>
