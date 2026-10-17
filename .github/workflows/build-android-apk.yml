@@ -1,0 +1,52 @@
+name: Android install APK
+
+on:
+  push:
+    branches:
+      - coach-gado/initial-setup
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/build-android-apk.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: gradle
+
+      - uses: android-actions/setup-android@v4.0.4
+
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: frontend
+
+      - name: Build and sync the mobile app
+        run: npm run build:mobile
+        working-directory: frontend
+
+      - name: Build the installable Android APK
+        run: chmod +x gradlew && ./gradlew assembleDebug --no-daemon
+        working-directory: frontend/android
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Coach-Gado-Gym-Android-APK
+          path: frontend/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
