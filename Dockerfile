@@ -70,4 +70,4 @@ COPY --from=builder --chown=nobody:root /app/_build/${MIX_ENV}/rel/scopestrength
 
 USER nobody
 
-CMD ["/app/bin/server"]
+CMD ["/bin/sh", "-c", "./bin/scopestrength eval Scopestrength.Release.migrate && exec ./bin/server"]
