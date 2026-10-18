@@ -398,7 +398,7 @@ defmodule ScopestrengthWeb.VolumeTracking do
                             <span class={[
                               "inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset",
                               cond do
-                                change > 0 -> "bg-primary/10 text-primary ring-emerald-200"
+                                change > 0 -> "bg-primary/10 text-primary ring-primary/30"
                                 change < 0 -> "bg-danger/10 text-danger ring-rose-200"
                                 true -> "bg-secondary text-foreground ring-gray-200"
                               end

@@ -146,7 +146,7 @@ end
 
 if config_env() == :prod do
   host =
-    System.get_env("PHX_HOST") ||
+    System.get_env("PHX_HOST") || System.get_env("RENDER_EXTERNAL_HOSTNAME") ||
       raise """
       environment variable PHX_HOST is missing.
       This is the public hostname the app is served from, e.g. app.scopestrength.com

@@ -14,26 +14,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: "#a3e635",
+        brand: "#FF3B45",
 
-        background: "#1A1A1B",
-        card: "#222223",
-        muted: "#272728",
-        secondary: "#303031",
-        line: "#3a3a3b",
+        background: "#101012",
+        card: "#1A1A1D",
+        muted: "#222226",
+        secondary: "#2D2D32",
+        line: "#414147",
 
-        foreground: "#efefef",
-        dim: "#8a8a8a",
-        faint: "#5a5a5a",
+        foreground: "#F5F5F5",
+        dim: "#A5A5AD",
+        faint: "#777780",
 
         primary: {
-          DEFAULT: "#a3e635",
-          foreground: "#1A1A1B"
+          DEFAULT: "#FF3B45",
+          foreground: "#101012"
         },
 
-        success: "#a3e635",
-        warning: "#e8a33d",
-        danger: "#e8674f"
+        success: "#F5F5F5",
+        warning: "#FF8A91",
+        danger: "#FF3B45"
       },
       fontFamily: {
         sans: ["DM Sans", ...defaultTheme.fontFamily.sans],
@@ -47,7 +47,7 @@ module.exports = {
         xl: "14px"
       },
       ringColor: {
-        DEFAULT: "#a3e635"
+        DEFAULT: "#FF3B45"
       }
     },
   },

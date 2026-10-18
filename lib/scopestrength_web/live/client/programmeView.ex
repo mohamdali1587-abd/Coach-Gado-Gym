@@ -116,7 +116,7 @@ defmodule ScopestrengthWeb.Client.ProgrammeView do
                     <p class="text-xs font-semibold text-foreground truncate"><%= muscle_group %></p>
                     <div class="flex items-center justify-between mt-2 text-[11px] text-dim">
                       <span>Total Sets</span>
-                      <span class="inline-flex items-center justify-center px-2 py-0.5 bg-gradient-to-r from-orange-500 to-amber-500 text-foreground text-xs font-semibold rounded-full">
+                      <span class="inline-flex items-center justify-center px-2 py-0.5 bg-gradient-to-r from-primary to-red-700 text-primary-foreground text-xs font-semibold rounded-full">
                         <%= total_sets %>
                       </span>
                     </div>

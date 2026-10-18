@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: coach-gado-gym
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    startCommand: ./bin/scopestrength eval Scopestrength.Release.migrate && ./bin/server
+    healthCheckPath: /
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SECRET_KEY_BASE
+        generateValue: true
+      - key: REGISTRATION_ENABLED
+        value: "true"
+      - key: MAILER_ADAPTER
+        value: local

@@ -124,7 +124,7 @@ defmodule ScopestrengthWeb.Client.Weight do
 
   def render(assigns) do
     ~H"""
-    <div class="min-h-screen bg-gradient-to-br from-primary via-teal-50 to-cyan-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div class="min-h-screen bg-gradient-to-br from-background via-card to-muted py-8 px-4 sm:px-6 lg:px-8">
       <div class="max-w-4xl mx-auto">
 
         <div class="mb-6">
@@ -264,7 +264,7 @@ defmodule ScopestrengthWeb.Client.Weight do
 
                 <polyline
                   fill="none"
-                  stroke="#f59e0b"
+                  stroke="#FF3B45"
                   stroke-width="2.5"
                   stroke-linecap="round"
                   stroke-linejoin="round"
@@ -279,17 +279,17 @@ defmodule ScopestrengthWeb.Client.Weight do
                 <%= for {val, i} <- Enum.with_index(values) do %>
                   <% x = padding_x + (i / max(count - 1, 1) * chart_w) %>
                   <% y = padding_y + chart_h - ((val - min_val) / range * chart_h) %>
-                  <circle cx={x} cy={y} r="5" fill="white" stroke="#059669" stroke-width="2.5" />
+                  <circle cx={x} cy={y} r="5" fill="white" stroke="#FF3B45" stroke-width="2.5" />
                 <% end %>
 
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#059669" />
-                    <stop offset="100%" stop-color="#0d9488" />
+                    <stop offset="0%" stop-color="#FF3B45" />
+                    <stop offset="100%" stop-color="#A90F1B" />
                   </linearGradient>
                   <linearGradient id="area-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#059669" />
-                    <stop offset="100%" stop-color="#059669" stop-opacity="0" />
+                    <stop offset="0%" stop-color="#FF3B45" />
+                    <stop offset="100%" stop-color="#FF3B45" stop-opacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -300,7 +300,7 @@ defmodule ScopestrengthWeb.Client.Weight do
                 <span>Actual Weight</span>
               </div>
               <div class="flex items-center gap-2">
-                <div class="w-6 h-0.5 bg-warning rounded" style="border-top: 2px dashed #f59e0b; background: none;"></div>
+                <div class="w-6 h-0.5 bg-warning rounded" style="border-top: 2px dashed #FF8A91; background: none;"></div>
                 <span>Trend (EMA)</span>
               </div>
             </div>

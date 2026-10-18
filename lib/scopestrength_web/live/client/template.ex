@@ -161,7 +161,7 @@ defmodule ScopestrengthWeb.Client.Template do
                   placeholder="Enter template name"
                 />
               </div>
-              <.button class="inline-flex items-center px-4 py-2 bg-primary hover:bg-green-700 text-primary-foreground font-medium rounded-lg shadow-sm transition-colors duration-200">
+              <.button class="inline-flex items-center px-4 py-2 bg-primary hover:bg-red-700 text-primary-foreground font-medium rounded-lg shadow-sm transition-colors duration-200">
                 Update Name
               </.button>
             </div>
